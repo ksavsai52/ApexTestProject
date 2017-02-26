@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Apex Appointment App</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Customized CSS -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="row appointment_ui">
+			<div class="jumbotron">
+				<div class="row" id="new_button">
+					<div class="col-sm-12">
+	       				<button type="button" class="btn btn-info">NEW</button>
+	       			</div>
+	       		</div>
+	       		<div class="row" id="appointment_form">
+	       			<div class="col-sm-6">
+	       				<form class="form-horizontal" name="appointment_form" method="POST" action="cgi-bin/add_appointment.pl">
+	       					<div class="form-group">
+						    	<div class="col-sm-2">
+						      		<button type="submit" class="btn btn-primary" id="add_appointment">Add</button>
+						    	</div>
+						    	<div class="col-sm-2">
+						      		<button type="button" class="btn btn-danger" id="cancel_appointment">Cancel</button>
+						    	</div>
+						  	</div>
+						  	<div class="form-group">
+						    	<label for="date" class="col-sm-2 control-label">Date</label>
+						    	<div class="col-sm-10">
+						      		<input type="text" class="form-control" id="date" name="date" placeholder="Jan 1">
+						    	</div>
+						  	</div>
+						  	<div class="form-group">
+						    	<label for="time" class="col-sm-2 control-label">Time</label>
+						    	<div class="col-sm-10">
+						      		<input type="text" class="form-control" id="time" name="time" placeholder="12:00am">
+						    	</div>
+						  	</div>
+						  	<div class="form-group">
+						    	<label for="description" class="col-sm-2 control-label">Description</label>
+						    	<div class="col-sm-10">
+						      		<input type="text" class="form-control" id="description" name="description" placeholder="Appointment Description">
+						    	</div>
+						  	</div>
+						</form>
+	       			</div>
+	       		</div>
+	       		<br>
+	       		<br>
+	       		<div class="row form-group">
+	       			<div class="col-sm-6">
+	       				<input type="text" name="search" class="form-control" id="search_text" placeholder="Appointment Description">
+	       			</div>
+	       			<div class="col-sm-6">
+	       				<button type="button" class="btn btn-primary" id="search_appointment">SEARCH</button>
+	       			</div>
+	       		</div>
+	      	</div>
+	    </div>
+	    <div class="row" id="appointment_list">
+	    	<div class="jumbotron">
+	    		<table class="table table-bordered">
+	    			<thead>
+	    				<tr>
+	    					<th>DATE</th>
+	    					<th>TIME</th>
+	    					<th>DESCRIPTION</th>
+	    				</tr>
+	    			</thead>
+	    			<tbody id="appointment_data">
+	    				
+	    			</tbody>
+	    		</table>
+	    	</div>
+	    </div>
+
+    </div><!-- /.container -->
+
+	<!-- Latest jquery script -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<!-- jquery validation script -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<!-- Customized JavaScript -->
+	<script type="text/javascript" src="js/script.js"></script>
+
+	<!-- Custom jQuery Validation -->
+	<script type="text/javascript" src="js/formValidations.js"></script>
+</body>
+
+</html>
